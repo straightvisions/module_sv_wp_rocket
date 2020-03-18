@@ -22,9 +22,9 @@
 			
 			$this->load_settings();
 			
-			if($this->get_setting('lazy_load_threshold')->run_type()->get_data()){
+			if($this->get_setting('lazy_load_threshold')->get_data()){
 				add_filter( 'rocket_lazyload_threshold', function($threshold){
-					return $this->get_setting('lazy_load_threshold')->run_type()->get_data();
+					return $this->get_setting('lazy_load_threshold')->get_data();
 				} );
 			}
 		}
